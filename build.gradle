@@ -18,6 +18,9 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven {
+       url localRepo
+   	}
 }
 
 dependencies {
@@ -28,4 +31,6 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	compile files(localRepo + '/jpop-common-0.0.1-SNAPSHOT.jar') 
 }

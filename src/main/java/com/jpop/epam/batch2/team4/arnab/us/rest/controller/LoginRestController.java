@@ -1,4 +1,4 @@
-package com.jpop.epam.us.rest.controller;
+package com.jpop.epam.batch2.team4.arnab.us.rest.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jpop.epam.us.rest.model.db.LoginData;
-import com.jpop.epam.us.rest.model.json.LoginJson;
-import com.jpop.epam.us.rest.model.json.UserRegistrationJson;
-import com.jpop.epam.us.rest.service.LoginService;
-import com.jpop.epam.us.rest.service.UserRegistrationService;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.LoginData;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.LoginJson;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserRegistrationJson;
+import com.jpop.epam.batch2.team4.arnab.us.rest.service.LoginService;
+import com.jpop.epam.batch2.team4.arnab.us.rest.service.UserRegistrationService;
 
 @RestController
 public class LoginRestController {

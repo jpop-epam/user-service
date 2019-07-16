@@ -1,4 +1,4 @@
-package com.jpop.epam.us.rest.service;
+package com.jpop.epam.batch2.team4.arnab.us.rest.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jpop.epam.common.constants.ApplicationCommonConstants;
-import com.jpop.epam.common.constants.UserRoles;
-import com.jpop.epam.us.rest.exception.NoSuchUserException;
-import com.jpop.epam.us.rest.model.db.LoginData;
-import com.jpop.epam.us.rest.model.db.UserRegistrationData;
-import com.jpop.epam.us.rest.model.json.UserRegistrationJson;
-import com.jpop.epam.us.rest.repository.UserRegistrationRepository;
-import com.jpop.epam.us.rest.transformer.UserTransformer;
+import com.jpop.epam.batch2.team4.arnab.common.constants.ApplicationCommonConstants;
+import com.jpop.epam.batch2.team4.arnab.common.constants.UserRoles;
+import com.jpop.epam.batch2.team4.arnab.us.rest.exception.NoSuchUserException;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.LoginData;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.UserRegistrationData;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserRegistrationJson;
+import com.jpop.epam.batch2.team4.arnab.us.rest.repository.UserRegistrationRepository;
+import com.jpop.epam.batch2.team4.arnab.us.rest.transformer.UserTransformer;
 
 @Service
 public class UserRegistrationService {

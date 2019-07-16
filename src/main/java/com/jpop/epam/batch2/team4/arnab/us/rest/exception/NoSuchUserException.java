@@ -1,9 +1,9 @@
-package com.jpop.epam.us.rest.exception;
+package com.jpop.epam.batch2.team4.arnab.us.rest.exception;
 
 import org.springframework.http.HttpStatus;
 
-import com.jpop.epam.common.constants.ApplicationCommonConstants;
-import com.jpop.epam.common.service.exception.ApplicationError;
+import com.jpop.epam.batch2.team4.arnab.common.constants.ApplicationCommonConstants;
+import com.jpop.epam.batch2.team4.arnab.common.service.exception.ApplicationError;
 
 public class NoSuchUserException extends ApplicationError {
 

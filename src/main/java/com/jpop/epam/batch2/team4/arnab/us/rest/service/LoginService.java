@@ -1,14 +1,14 @@
-package com.jpop.epam.us.rest.service;
+package com.jpop.epam.batch2.team4.arnab.us.rest.service;
 
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.jpop.epam.common.crypto.CryptographyUtil;
-import com.jpop.epam.common.service.exception.InvalidCredentialsException;
-import com.jpop.epam.us.rest.model.db.LoginData;
-import com.jpop.epam.us.rest.model.json.LoginJson;
-import com.jpop.epam.us.rest.repository.LoginRepository;
+import com.jpop.epam.batch2.team4.arnab.common.crypto.CryptographyUtil;
+import com.jpop.epam.batch2.team4.arnab.common.service.exception.InvalidCredentialsException;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.LoginData;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.LoginJson;
+import com.jpop.epam.batch2.team4.arnab.us.rest.repository.LoginRepository;
 
 @Service
 public class LoginService {

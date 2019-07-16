@@ -1,11 +1,11 @@
-package com.jpop.epam.us.rest.transformer;
+package com.jpop.epam.batch2.team4.arnab.us.rest.transformer;
 
 
-import com.jpop.epam.common.constants.UserRoles;
-import com.jpop.epam.us.rest.model.db.LoginData;
-import com.jpop.epam.us.rest.model.db.UserRegistrationData;
-import com.jpop.epam.us.rest.model.json.UserAccessType;
-import com.jpop.epam.us.rest.model.json.UserRegistrationJson;
+import com.jpop.epam.batch2.team4.arnab.common.constants.UserRoles;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.LoginData;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.UserRegistrationData;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserAccessType;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserRegistrationJson;
 
 public class UserTransformer {
 

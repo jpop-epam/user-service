@@ -1,4 +1,4 @@
-package com.jpop.epam.us.rest;
+package com.jpop.epam.batch2.team4.arnab.us.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

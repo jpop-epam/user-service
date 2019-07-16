@@ -1,4 +1,4 @@
-package com.jpop.epam.us.rest.model.db;
+package com.jpop.epam.batch2.team4.arnab.us.rest.model.db;
 
 import java.io.Serializable;
 

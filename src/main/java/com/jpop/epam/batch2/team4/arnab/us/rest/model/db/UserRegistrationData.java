@@ -1,12 +1,16 @@
 package com.jpop.epam.batch2.team4.arnab.us.rest.model.db;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -51,10 +55,16 @@ public class UserRegistrationData implements Serializable {
 	@Column(nullable = false, length = 30)
 	private String displayName;
 
-	@Column(nullable = false, length = 2)
-	private String userAccessType;
+//	@Column(nullable = false, length = 2)
+//	private String userAccessType;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id", referencedColumnName = "user_id")
 	private LoginData loginData;
+	
+	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinTable(name="user_group_mapping", 
+		joinColumns = {@JoinColumn(name="user_id")}, 
+		inverseJoinColumns = {@JoinColumn(name="group_id")})
+	private List<AccessGroup> accessGroups;
 }

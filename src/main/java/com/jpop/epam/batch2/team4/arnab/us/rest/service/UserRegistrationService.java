@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jpop.epam.batch2.team4.arnab.common.constants.ApplicationCommonConstants;
 import com.jpop.epam.batch2.team4.arnab.common.constants.UserRoles;
 import com.jpop.epam.batch2.team4.arnab.us.rest.exception.NoSuchUserException;
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.AccessGroup;
 import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.LoginData;
 import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.UserRegistrationData;
 import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserRegistrationJson;
@@ -50,7 +51,6 @@ public class UserRegistrationService {
 		UserRegistrationData userRegData = UserTransformer.userJsonToUserRegistration(user);
 		
 		userRegData.setRegistrationDate(ApplicationCommonConstants.getCurrentDateAsString());
-		userRegData.setUserAccessType(UserRoles.BASIC_USER.getAccessCode());
 
 		LoginData loginData = UserTransformer.userJsonToUserLoginData(user);
 
@@ -58,8 +58,14 @@ public class UserRegistrationService {
 		
 		userRegData.setLoginData(loginData);
 		
+		List<AccessGroup> accessGroups = userRegData.getAccessGroups();
+		userRegData.setAccessGroups(null);
+		
 		UserRegistrationData saved = userRegistrationRepository.save(userRegData);
-
+		saved.setAccessGroups(accessGroups);
+		
+		saved = userRegistrationRepository.save(saved);
+		
 		return UserTransformer.userRegistrationToUserJson(saved);
 	}
 

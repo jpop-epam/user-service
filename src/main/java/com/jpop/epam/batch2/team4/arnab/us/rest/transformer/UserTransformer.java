@@ -1,10 +1,8 @@
 package com.jpop.epam.batch2.team4.arnab.us.rest.transformer;
 
 
-import com.jpop.epam.batch2.team4.arnab.common.constants.UserRoles;
 import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.LoginData;
 import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.UserRegistrationData;
-import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserAccessType;
 import com.jpop.epam.batch2.team4.arnab.us.rest.model.json.UserRegistrationJson;
 
 public class UserTransformer {
@@ -22,6 +20,7 @@ public class UserTransformer {
 		userRegistrationData.setPin(userJson.getPin());
 		userRegistrationData.setUserName(userJson.getUserName());
 		userRegistrationData.setUserId(userJson.getUserId());
+		userRegistrationData.setAccessGroups(userJson.getAccessGroups());
 		return userRegistrationData;
 	}
 
@@ -38,14 +37,16 @@ public class UserTransformer {
 		userJson.setUserName(userRegistrationData.getUserName());
 		userJson.setUserId(userRegistrationData.getUserId());
 		
-		String accessTypeDBCode = userRegistrationData.getUserAccessType();
+//		String accessTypeDBCode = userRegistrationData.getUserAccessType();
 		
-		UserRoles userRoles = UserRoles.getByDBCode(accessTypeDBCode);
+//		UserRoles userRoles = UserRoles.getByDBCode(accessTypeDBCode);
 		
-		UserAccessType userAccessType = new UserAccessType();
-		userAccessType.setAccessType(userRoles.getAccessType());
-		userAccessType.setDescription(userRoles.getDescription());
-		userJson.setUserAccessType(userAccessType);
+//		UserAccessType userAccessType = new UserAccessType();
+//		userAccessType.setAccessType(userRoles.getAccessType());
+//		userAccessType.setDescription(userRoles.getDescription());
+//		userJson.setUserAccessType(userAccessType);
+		
+		userJson.setAccessGroups(userRegistrationData.getAccessGroups());
 		return userJson;
 	}
 	public static LoginData userJsonToUserLoginData(UserRegistrationJson userJson) {

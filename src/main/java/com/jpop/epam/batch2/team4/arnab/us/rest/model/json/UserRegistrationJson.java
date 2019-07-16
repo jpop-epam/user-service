@@ -1,5 +1,9 @@
 package com.jpop.epam.batch2.team4.arnab.us.rest.model.json;
 
+import java.util.List;
+
+import com.jpop.epam.batch2.team4.arnab.us.rest.model.db.AccessGroup;
+
 import lombok.Data;
 
 @Data
@@ -16,5 +20,5 @@ public class UserRegistrationJson {
 	private int pin;
 	private String contactNo;
 	private String displayName;
-	private UserAccessType userAccessType;
+	private List<AccessGroup> accessGroups;
 }
